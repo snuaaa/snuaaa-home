@@ -15,6 +15,12 @@ module.exports = {
   ],
   rules: {
     "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", "always-multiline"],
+    "key-spacing": ["error", {
+      "beforeColon": false,
+      "afterColon": true,
+    }],
     "react/jsx-props-no-spreading": 0,
-  }
+  },
 }
