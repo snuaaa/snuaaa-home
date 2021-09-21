@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { css } from '@emotion/css';
-import usePage from 'src/hooks/usePage';
-import Home from 'src/components/home';
 import PageList from 'src/components/pageList';
 import Background from 'src/components/background';
+import useDebounceScroll from 'src/hooks/useDebounceScroll';
+import usePage from 'src/hooks/usePage';
 
 const styles = {
   wrapper: css({
@@ -14,7 +14,13 @@ const styles = {
 };
 
 const Main: NextPage = () => {
-  const { index } = usePage();
+  const { index, next, prev } = usePage();
+
+  useDebounceScroll(prev, () => {
+    if (index > 0) {
+      next();
+    }
+  });
 
   return (
     <>
@@ -23,14 +29,9 @@ const Main: NextPage = () => {
       </Head>
       <Background />
       <div className={styles.wrapper}>
-        <Home />
-        {
-          index > 0 &&
-          <PageList />
-        }
+        <PageList />
       </div>
     </>
   );
 };
-
 export default Main;

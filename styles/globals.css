@@ -5,6 +5,7 @@ body {
   height: 100%;
   font-family: Cafe24SsurroundAir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow: hidden;
 }
 
 a {

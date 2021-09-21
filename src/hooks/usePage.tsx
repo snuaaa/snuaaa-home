@@ -17,7 +17,7 @@ const usePage = () => {
   const next = () => {
     if (index < pages.length - 1) {
       setPage(pages[index + 1]);
-    }  
+    }
   };
 
   return { prev, next, index, page };
