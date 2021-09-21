@@ -20,7 +20,7 @@ const usePage = () => {
     }  
   };
 
-  return { prev, next, page };
+  return { prev, next, index, page };
 };
 
 export default usePage;
