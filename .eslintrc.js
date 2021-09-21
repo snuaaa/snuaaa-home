@@ -21,6 +21,7 @@ module.exports = {
       "beforeColon": false,
       "afterColon": true,
     }],
+    "import/prefer-default-export": "off",
     "react/jsx-props-no-spreading": 0,
   },
 }
