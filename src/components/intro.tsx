@@ -4,7 +4,7 @@ import { getStyle } from 'src/styles/pageStyle';
 
 const styles = {
   main: css({
-    backgroundColor: '#123456',
+    color: '#FFFFFF',
   }),
 };
 

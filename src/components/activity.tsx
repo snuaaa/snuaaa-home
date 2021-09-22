@@ -4,8 +4,7 @@ import { getStyle } from 'src/styles/pageStyle';
 
 const styles = {
   main: css({
-    padding: '3rem',
-    backgroundColor: '#abcdef',
+    color: '#abcdef',
   }),
 };
 
