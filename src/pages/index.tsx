@@ -5,6 +5,7 @@ import PageList from 'src/components/pageList';
 import Background from 'src/components/background';
 import usePage from 'src/hooks/usePage';
 import useThrottleScroll from 'src/hooks/useThrottleScroll';
+import ScrollStatusBar from 'src/components/scrollStatusBar';
 
 const styles = {
   wrapper: css({
@@ -28,6 +29,10 @@ const Main: NextPage = () => {
         <title>SNU AAA HOME</title>
       </Head>
       <Background />
+      {
+        index > 0 &&
+        <ScrollStatusBar />
+      }
       <div className={styles.wrapper}>
         <PageList />
       </div>

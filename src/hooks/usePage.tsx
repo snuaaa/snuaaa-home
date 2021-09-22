@@ -20,7 +20,9 @@ const usePage = () => {
     }
   };
 
-  return { prev, next, index, page };
+  const max = pages.length;
+
+  return { prev, next, index, max, page };
 };
 
 export default usePage;
