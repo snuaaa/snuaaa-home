@@ -3,8 +3,8 @@ import Head from 'next/head';
 import { css } from '@emotion/css';
 import PageList from 'src/components/pageList';
 import Background from 'src/components/background';
-import useDebounceScroll from 'src/hooks/useDebounceScroll';
 import usePage from 'src/hooks/usePage';
+import useThrottleScroll from 'src/hooks/useThrottleScroll';
 
 const styles = {
   wrapper: css({
@@ -16,7 +16,7 @@ const styles = {
 const Main: NextPage = () => {
   const { index, next, prev } = usePage();
 
-  useDebounceScroll(prev, () => {
+  useThrottleScroll(prev, () => {
     if (index > 0) {
       next();
     }
