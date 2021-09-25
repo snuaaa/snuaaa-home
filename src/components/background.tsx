@@ -2,11 +2,12 @@ import Image from 'next/image';
 import { css, cx } from '@emotion/css';
 import stars from 'public/img/stars.png';
 import usePage from 'src/hooks/usePage';
+import { pages } from 'src/constants/index';
 
 const styles = {
   background: css({
     position: 'absolute',
-    height: '500%',
+    height: `${pages.length * 100}%`,
     width: '100%',
     zIndex: -1,
     background: 'linear-gradient(180deg, #142E50 0.39%, #193053 14.97%, #184E80 36.32%, #4B87A9 64.45%, #9CDBFF 85.28%, #FFFFFF 100%)',

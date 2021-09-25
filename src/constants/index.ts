@@ -4,6 +4,8 @@ enum PageName {
   ACTIVITY = 'activity',
   DOME = 'dome',
   TELESCOPE = 'telescope',
+  HISTORY = 'history',
+  CONTACT = 'contact',
 }
 
 const pages = [
@@ -12,6 +14,8 @@ const pages = [
   PageName.ACTIVITY,
   PageName.DOME,
   PageName.TELESCOPE,
+  PageName.HISTORY,
+  PageName.CONTACT,
 ];
 
 export { PageName, pages };

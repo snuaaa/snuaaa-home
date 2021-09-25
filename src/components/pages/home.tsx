@@ -2,7 +2,6 @@ import { css } from '@emotion/css';
 import usePage from 'src/hooks/usePage';
 import Image from 'next/image';
 import logo from 'public/img/aaa.png';
-import { getStyle } from 'src/styles/pageStyle';
 
 const styles = {
   title: css({
@@ -34,10 +33,10 @@ const styles = {
 };
 
 const Home: React.FC = () => {
-  const { index, next } = usePage();
+  const { next } = usePage();
 
   return (
-    <div className={getStyle(index, 0)}>
+    <>
       <h1 className={styles.title}>
         서울대학교 아마추어 천문회
       </h1>
@@ -53,7 +52,7 @@ const Home: React.FC = () => {
           <button type="button">옛 커뮤니티</button>
         </a>
       </div>
-    </div>
+    </>
   );
 };
 
