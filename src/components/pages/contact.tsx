@@ -1,6 +1,7 @@
 import { css, cx } from '@emotion/css';
 import { useCallback } from 'react';
 import Canvas from 'src/animation/canvas';
+import Page from 'src/components/page';
 
 const styles = {
   wrapper: css({
@@ -53,7 +54,7 @@ const Contact: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <Page>
       <div className={cx([styles.wrapper])}>
         <div>
           <h2 className={styles.title}>Contact Us</h2>
@@ -74,7 +75,7 @@ const Contact: React.FC = () => {
       </div>
       <div className={styles.sun} />
       <canvas className={styles.canvas} ref={canvasRef} />
-    </>
+    </Page>
   );
 };
 

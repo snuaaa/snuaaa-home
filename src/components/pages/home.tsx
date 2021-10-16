@@ -1,5 +1,6 @@
 import { css } from '@emotion/css';
 import usePage from 'src/hooks/usePage';
+import Page from 'src/components/page';
 import Image from 'next/image';
 import logo from 'public/img/aaa.png';
 
@@ -36,7 +37,7 @@ const Home: React.FC = () => {
   const { next } = usePage();
 
   return (
-    <>
+    <Page>
       <h1 className={styles.title}>
         서울대학교 아마추어 천문회
       </h1>
@@ -52,7 +53,7 @@ const Home: React.FC = () => {
           <button type="button">옛 커뮤니티</button>
         </a>
       </div>
-    </>
+    </Page>
   );
 };
 
