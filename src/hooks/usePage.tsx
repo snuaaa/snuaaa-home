@@ -20,9 +20,13 @@ const usePage = () => {
     }
   };
 
+  const reset = () => {
+    setPage(pages[0]);
+  };
+
   const max = pages.length;
 
-  return { prev, next, index, max, page };
+  return { reset, prev, next, index, max, page };
 };
 
 export default usePage;

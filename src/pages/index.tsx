@@ -5,7 +5,7 @@ import PageList from 'src/components/pageList';
 import Background from 'src/components/background';
 import usePage from 'src/hooks/usePage';
 import useThrottleScroll from 'src/hooks/useThrottleScroll';
-import ScrollStatusBar from 'src/components/scrollStatusBar';
+import SideBar from 'src/components/sidebar/sidebar';
 
 const styles = {
   wrapper: css({
@@ -31,7 +31,7 @@ const Main: NextPage = () => {
       <Background />
       {
         index > 0 &&
-        <ScrollStatusBar />
+        <SideBar />
       }
       <div className={styles.wrapper}>
         <PageList />
