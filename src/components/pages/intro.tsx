@@ -1,6 +1,7 @@
 import { css } from '@emotion/css';
-import logo from 'public/img/logo.png';
 import Image from 'next/image';
+import Page from 'src/components/page';
+import logo from 'public/img/logo.png';
 import photo from 'public/img/photo.png';
 
 const styles = {
@@ -60,7 +61,7 @@ const styles = {
 
 const Intro: React.FC = () => (
 
-  <>
+  <Page>
     <div className={styles.main}>
       <div className={styles.leftLayout}>
         <div className={styles.contentWrap}>
@@ -81,7 +82,7 @@ const Intro: React.FC = () => (
         <div className={styles.photoText}>AAA18 김현용 작</div>
       </div>
     </div>
-  </>
+  </Page>
 );
 
 export default Intro;

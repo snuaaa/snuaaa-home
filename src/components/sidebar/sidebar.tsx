@@ -1,18 +1,9 @@
-import { css, cx, keyframes } from '@emotion/css';
+import { useMemo } from 'react';
+import { css, cx } from '@emotion/css';
+import usePage from 'src/hooks/usePage';
 import ScrollStatusBar from './scrollStatusBar';
 import Footer from './footer';
 import Back from './back';
-
-const animation = {
-  fadeIn: keyframes({
-    from: {
-      opacity: 0,
-    },
-    to: {
-      opacity: 1,
-    },
-  }),
-};
 
 const styles = {
   wrapper: css({
@@ -25,17 +16,27 @@ const styles = {
     alignItems: 'center',
     color: '#FFFFFF',
     zIndex: 1,
-    animation: `${animation.fadeIn} 1s`,
+    transitionProperty: 'opacity',
+    transitionDuration: '1s',
+    transitionTimingFunction: 'ease',
   }),
 };
 
-const SideBar: React.FC = () => (
+const SideBar: React.FC = () => {
 
-  <div className={cx([styles.wrapper])}>
-    <Back />
-    <ScrollStatusBar />
-    <Footer />
-  </div>
-);
+  const { index } = usePage();
+
+  const visible = useMemo(() => css({
+    opacity: index === 0 ? 0 : 1,
+  }), [index]);
+
+  return (
+    <div className={cx([styles.wrapper, visible])}>
+      <Back />
+      <ScrollStatusBar />
+      <Footer />
+    </div>
+  );
+};
 
 export default SideBar;
