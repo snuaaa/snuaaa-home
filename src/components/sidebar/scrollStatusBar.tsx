@@ -16,7 +16,6 @@ const animation = {
 
 const styles = {
   wrapper: css({
-    height: '100%',
     width: '7rem',
     position: 'absolute',
     display: 'flex',
