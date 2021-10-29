@@ -23,7 +23,8 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     '@media screen and (max-width: 860px)': {
-      width: '100%',
+      right: 0,
+      width: '50%',
       flexDirection: 'row',
       justifyContent: 'end',
       alignItems: 'center',

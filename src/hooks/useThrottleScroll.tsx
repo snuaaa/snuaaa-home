@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 const TIMEOUT = 0.7 * 1000;
-const THRESHOLD = 20;
+const THRESHOLD = 50;
 
 const useThrottleScroll = (up: () => void, down: () => void) => {
   const canCallback = useRef<boolean>(true);
