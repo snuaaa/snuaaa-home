@@ -4,12 +4,16 @@ import usePage from 'src/hooks/usePage';
 const styles = {
   button: css({
     position: 'absolute',
-    top: '0',
-    marginTop: '6rem',
+    top: '6rem',
     cursor: 'pointer',
     color: '#FFFFFF',
     background: 'none',
     fontSize: '1.5rem',
+    '@media screen and (max-width: 860px)': {
+      top: '1.5rem',
+      left: '1.5rem',
+      fontSize: '1rem',
+    },
   }),
 };
 

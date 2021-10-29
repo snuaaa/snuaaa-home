@@ -2,7 +2,6 @@ import { useMemo } from 'react';
 import { css, cx } from '@emotion/css';
 import usePage from 'src/hooks/usePage';
 import ScrollStatusBar from './scrollStatusBar';
-import Footer from './footer';
 import Back from './back';
 
 const styles = {
@@ -19,6 +18,11 @@ const styles = {
     transitionProperty: 'opacity',
     transitionDuration: '1s',
     transitionTimingFunction: 'ease',
+    '@media screen and (max-width: 860px)': {
+      height: '4rem',
+      width: '100%',
+      flexDirection: 'row',
+    },
   }),
 };
 
@@ -34,7 +38,6 @@ const SideBar: React.FC = () => {
     <div className={cx([styles.wrapper, visible])}>
       <Back />
       <ScrollStatusBar />
-      <Footer />
     </div>
   );
 };

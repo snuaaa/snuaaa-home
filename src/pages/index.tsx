@@ -5,6 +5,7 @@ import Background from 'src/components/background';
 import usePage from 'src/hooks/usePage';
 import useThrottleScroll from 'src/hooks/useThrottleScroll';
 import SideBar from 'src/components/sidebar/sidebar';
+import Footer from 'src/components/sidebar/footer';
 
 const Main: NextPage = () => {
   const { index, next, prev } = usePage();
@@ -23,6 +24,7 @@ const Main: NextPage = () => {
       <Background />
       <SideBar />
       <PageList />
+      <Footer />
     </>
   );
 };

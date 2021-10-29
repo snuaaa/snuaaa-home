@@ -10,7 +10,7 @@ const styles = {
     textAlign: 'center',
     height: '100%',
     width: '100%',
-    paddingTop: '3rem',
+    paddingTop: '8rem',
   }),
   title: css({
     fontFamily: '"Snowburst One", cursive',
