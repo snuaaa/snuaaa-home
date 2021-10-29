@@ -22,6 +22,14 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    '@media screen and (max-width: 860px)': {
+      right: 0,
+      width: '50%',
+      flexDirection: 'row',
+      justifyContent: 'end',
+      alignItems: 'center',
+      paddingRight: '1rem',
+    },
   }),
   dot: css({
     height: '0.5rem',
@@ -30,6 +38,11 @@ const styles = {
     borderRadius: '50%',
     margin: '1rem',
     transition: 'all ease 1s',
+    '@media screen and (max-width: 860px)': {
+      height: '0.4rem',
+      width: '0.4rem',
+      margin: '0.5rem',
+    },
   }),
   star: css({
     width: '1rem',
@@ -37,6 +50,14 @@ const styles = {
     margin: '0.75rem',
     background: 'transparent',
     animation: `${animation.fadeIn} 1s`,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    '@media screen and (max-width: 860px)': {
+      height: '0.6rem',
+      width: '0.6rem',
+      margin: '0.3rem',
+    },
   }),
 };
 

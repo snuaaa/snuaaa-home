@@ -17,7 +17,7 @@ const PageList: React.FC = () => {
     wrapper: css({
       height: `${max * 100}%`,
       width: '100%',
-      top: `${-index * 100}%`,
+      top: `${-index * 100}vh`,
       position: 'absolute',
       transitionProperty: 'top',
       transitionDuration: '1s',
