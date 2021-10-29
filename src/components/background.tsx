@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { css, cx } from '@emotion/css';
 import stars from 'public/img/stars.png';
+import starsMobile from 'public/img/stars_mobile.png';
 import usePage from 'src/hooks/usePage';
 import { pages } from 'src/constants/index';
 
@@ -23,6 +24,15 @@ const styles = {
     top: 0,
     mixBlendMode: 'lighten',
     opacity: 0.7,
+    '@media screen and (max-width: 860px)': {
+      display: 'none',
+    },
+  }),
+  mobile: css({
+    display: 'none',
+    '@media screen and (max-width: 860px)': {
+      display: 'block',
+    },
   }),
 };
 
@@ -34,7 +44,10 @@ const Background: React.FC = () => {
   return (
     <div className={cx([styles.background, backgroundStyle])}>
       <span className={styles.stars}>
-        <Image src={stars} layout="responsive" objectFit="fill" alt="background" height="100%" width="100%" />
+        <Image src={stars} layout="fill" objectFit="fill" alt="background" height="100%" width="100%" />
+      </span>
+      <span className={cx([styles.stars, styles.mobile])}>
+        <Image src={starsMobile} layout="fill" alt="background_mobile" />
       </span>
     </div>
   );
