@@ -13,9 +13,9 @@ class MyDocument extends Document {
           <meta name="description" content="Seoul National University Amateur Astronomy Association Homepage" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-          <link href="https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://s.googleapis.com" />
+          <link rel="preconnect" href="https://s.gstatic.com" crossOrigin="" />
+          <link href="https://s.googleapis.com/css2?family=Snowburst+One&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />
