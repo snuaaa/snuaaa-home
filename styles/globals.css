@@ -4,7 +4,7 @@ body {
   margin: 0;
   height: 100vh;
   position: relative;
-  -family: Cafe24SsurroundAir, -apple-system, BlinkMacSystem, Segoe UI, Roboto, Oxygen,
+  -family: Cafe24SsurroundAir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow: hidden;
 }
