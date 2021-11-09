@@ -143,7 +143,7 @@ const styles = {
     left: '-7.5rem',
     top: '-4rem',
   }),
-  picture_hide: css({
+  pictureHide: css({
     display: 'none',
   }),
   picture2: css({
@@ -200,37 +200,37 @@ const Activity: React.FC = () => {
           <button type='button' onClick={() => setIsClicked([1,0,0,0,0,0])} className={cx([styles.imageStyle1, styles.imageStyle])}> 
             <p className={cx([styles.fontStyle, styles.fontStyle1])}>디딤돌<br/>교육</p>
           </button>
-          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[0]? cx([styles.picture1, styles.picture]) : cx([styles.picture_hide, styles.picture])}>
+          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[0]? cx([styles.picture1, styles.picture]) : cx([styles.pictureHide, styles.picture])}>
             <p className={cx([styles.pictureFont])}>AAA의 1년간의 천문 활동은 천체 <br/> 사진 작품으로 남아 매년 하반기 <br/> 사진전을 통해 대외에 공개합니다.</p>
           </button>
           <button type='button' onClick={() => setIsClicked([0,1,0,0,0,0])} className={cx([styles.imageStyle2, styles.imageStyle])}>
             <p className={cx([styles.fontStyle, styles.fontStyle2])}>별모임</p>
           </button>
-          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[1]? cx([styles.picture2, styles.picture]) : cx([styles.picture_hide, styles.picture])}>
+          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[1]? cx([styles.picture2, styles.picture]) : cx([styles.pictureHide, styles.picture])}>
             <p className={cx([styles.pictureFont])}>매주 열리는 별모임 활동을 통해 <br/> 아마추어 천문 실습을 합니다.</p>
           </button>
           <button type='button' onClick={() => setIsClicked([0,0,1,0,0,0])} className={cx([styles.imageStyle3, styles.imageStyle])}>
             <p className={cx([styles.fontStyle, styles.fontStyle3])}>소규모<br/>관측회</p>
           </button>
-          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[2]? cx([styles.picture3, styles.picture]) : cx([styles.picture_hide, styles.picture])}>
+          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[2]? cx([styles.picture3, styles.picture]) : cx([styles.pictureHide, styles.picture])}>
             <p className={cx([styles.pictureFont])}>날씨가 좋은 날엔 도심을 떠나 <br/> 산 속에서 별을 보는 소규모 관측회가 열립니다. </p>
           </button>
           <button type='button' onClick={() => setIsClicked([0,0,0,1,0,0])} className={cx([styles.imageStyle4, styles.imageStyle])}>
             <p className={cx([styles.fontStyle, styles.fontStyle4])}>출사</p>
           </button>
-          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[3]? cx([styles.picture4, styles.picture]) : cx([styles.picture_hide, styles.picture])}>
+          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[3]? cx([styles.picture4, styles.picture]) : cx([styles.pictureHide, styles.picture])}>
             <p className={cx([styles.pictureFont])}> 학교 근처 및 서울 근교에서 천체 <br/> 사진을 촬영해보는 활동입니다.</p>
           </button>
           <button type='button' onClick={() => setIsClicked([0,0,0,0,1,0])} className={cx([styles.imageStyle5, styles.imageStyle])}>
             <p className={cx([styles.fontStyle, styles.fontStyle5])}>사진전</p>
           </button>
-          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[4]? cx([styles.picture5, styles.picture]) : cx([styles.picture_hide, styles.picture])}>
+          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[4]? cx([styles.picture5, styles.picture]) : cx([styles.pictureHide, styles.picture])}>
             <p className={cx([styles.pictureFont])}>AAA의 1년 간의 친목 활동은 천체 <br/> 사진 작품으로 남아 매년 하반기 <br/> 사진전을 통해 대외에 공개합니다.</p>
           </button>
           <button type='button' onClick={() => setIsClicked([0,0,0,0,0,1])} className={cx([styles.imageStyle6, styles.imageStyle])}>
             <p className={cx([styles.fontStyle, styles.fontStyle6])}>친목활동</p>
           </button>
-          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[5]? cx([styles.picture6, styles.picture]) : cx([styles.picture_hide, styles.picture])}>
+          <button type='button' onClick={() => setIsClicked([0,0,0,0,0,0])} className={isClicked[5]? cx([styles.picture6, styles.picture]) : cx([styles.pictureHide, styles.picture])}>
             <p className={cx([styles.pictureFont])}>여름, 겨울 관측회 및 기타 <br/> 다양한 친목도모 활동을 합니다!</p>
           </button>
           <Image src={line} alt='line'/>
