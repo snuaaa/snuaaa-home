@@ -21,6 +21,7 @@ button {
 
 * {
   box-sizing: border-box;
+  user-select: none,
 }
 
 #__next {
@@ -39,4 +40,14 @@ button {
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+::-webkit-scrollbar {
+  height: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
 }

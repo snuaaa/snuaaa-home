@@ -7,7 +7,7 @@ const styles = {
     position: 'absolute',
     left: '2rem',
     bottom: '3rem',
-    fontSize: '0.8rem',
+    fontSize: '0.6rem',
     color: '#FFFFFF',
     '@media screen and (max-width: 860px)': {
       left: '1rem',

@@ -23,7 +23,7 @@ const styles = {
   }),
   title: css({
     fontFamily: '"Snowburst One", cursive',
-    fontSize: '3rem',
+    fontSize: '2.5rem',
     fontWeight: 'normal',
     marginBottom: '5rem',
     '@media screen and (max-width: 800px)': {
