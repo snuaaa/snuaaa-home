@@ -2,12 +2,15 @@ import { css, cx } from '@emotion/css';
 import Page from 'src/components/page';
 import historyData from './historyData';
 
+const scrollbarSize = '1rem';
+const gradientSize = '5rem';
+
 const styles = {
   main: css({
     color: '#FFFFFF',
     height: '100%',
-    width: 'calc(100% - 40rem)',
-    padding: '3rem 0',
+    width: 'calc(100% - 30rem)',
+    padding: '3rem 0 7rem 0',
     display: 'flex',
     flexDirection: 'column',
     '@media screen and (max-width: 800px)': {
@@ -39,8 +42,13 @@ const styles = {
     flexGrow: 1,
     overflow: 'auto',
     gap: '1rem',
-    maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100% )',
-    maskRepeat: 'no-repeat',
+    maskImage: `linear-gradient(to right, transparent, #000000 ${gradientSize}, #000000 calc(100% - ${gradientSize}), transparent 100% ), linear-gradient(#000000, #000000)`,
+    maskRepeat: 'no-repeat, no-repeat',
+    maskSize: `auto calc(100% - ${scrollbarSize}), auto ${scrollbarSize}`,
+    maskPosition: 'top, bottom',
+    paddingBottom: scrollbarSize,
+    paddingLeft: gradientSize,
+    paddingRight: gradientSize,
   }),
   historyGridItem: css({
     width: '15rem',
