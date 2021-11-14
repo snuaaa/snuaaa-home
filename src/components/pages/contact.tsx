@@ -11,21 +11,51 @@ const styles = {
     height: '100%',
     width: '100%',
     paddingTop: '8rem',
+    '@media screen and (max-width: 800px)': {
+      paddingTop: '4rem',
+    },
+    '@media screen and (max-height: 800px)': {
+      paddingTop: '3rem',
+    },
+    '@media screen and (max-height: 600px)': {
+      paddingTop: '2rem',
+    },
   }),
   title: css({
     fontFamily: '"Snowburst One", cursive',
     fontSize: '3rem',
     fontWeight: 'normal',
     marginBottom: '5rem',
+    '@media screen and (max-width: 800px)': {
+      fontSize: '2rem',
+    },
+    '@media screen and (max-height: 800px)': {
+      marginBottom: '3rem',
+    },
+    '@media screen and (max-height: 600px)': {
+      marginBottom: '1.5rem',
+    },
   }),
   aaa: css({
     fontFamily: 'Cafe24Ssurround',
     fontSize: '1.8rem',
     lineHeight: 1.5,
     marginBottom: '3rem',
+    '@media screen and (max-width: 800px)': {
+      fontSize: '1.2rem',
+    },
+    '@media screen and (max-height: 800px)': {
+      marginBottom: '2.5rem',
+    },
+    '@media screen and (max-height: 600px)': {
+      marginBottom: '1.5rem',
+    },
   }),
   address: css({
     lineHeight: 1.5,
+    '@media screen and (max-width: 800px)': {
+      fontSize: '0.8rem',
+    },
   }),
   sun: css({
     position: 'absolute',
@@ -36,6 +66,7 @@ const styles = {
     borderRadius: '50%',
     background: '#FFFFFF',
     boxShadow: '0px 0px 7rem 5rem rgba(255, 255, 255, 0.8)',
+    zIndex: -1,
   }),
   canvas: css({
     position: 'absolute',
