@@ -40,8 +40,9 @@ const styles = {
     width: '10rem',
   }),
   detailImg: css({
-    borderRadius: '1rem',
-    overflow: 'hidden',
+    '& > div': {
+      borderRadius: '1rem',
+    },
   }),
   detailDescription: css({
     fontSize: '0.8rem',
@@ -106,7 +107,7 @@ const ActivityDetail: React.FC<Props> = (props) => {
       </button>
       <div className={cx([customStyle.detailWrapper, styles.detailWrapper])}>
         <span className={styles.detailImg}>
-          <Image src={detailImg} alt={`img_${name}`}  objectFit="cover"/>
+          <Image src={detailImg} alt={`img_${name}`} objectFit="cover" />
         </span>
         <p className={styles.detailDescription}>
           {detailDescription}
