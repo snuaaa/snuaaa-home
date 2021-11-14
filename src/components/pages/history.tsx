@@ -4,6 +4,7 @@ import historyData from './historyData';
 
 const scrollbarSize = '1rem';
 const gradientSize = '5rem';
+const gradientSizeMobile = '2rem';
 
 const styles = {
   main: css({
@@ -26,11 +27,13 @@ const styles = {
     '@media screen and (max-width: 800px)': {
       fontSize: '2rem',
     },
-    '@media screen and (max-height: 800px)': {
-      marginBottom: '3rem',
+    '@media screen and (max-height: 900px)': {
+      fontSize: '2rem',
+      marginBottom: '1.5rem',
     },
     '@media screen and (max-height: 600px)': {
-      marginBottom: '1.5rem',
+      fontSize: '1.7rem',
+      marginBottom: '1rem',
     },
   }),
   historyGridContainer: css({
@@ -49,6 +52,14 @@ const styles = {
     paddingBottom: scrollbarSize,
     paddingLeft: gradientSize,
     paddingRight: gradientSize,
+    '@media screen and (max-width: 800px)': {
+      maskImage: `linear-gradient(to right, transparent, #000000 ${gradientSizeMobile}, #000000 calc(100% - ${gradientSizeMobile}), transparent 100% ), linear-gradient(#000000, #000000)`,
+      paddingLeft: gradientSizeMobile,
+      paddingRight: gradientSizeMobile,
+    },
+    '@media screen and (max-height: 750px)': {
+      gridTemplateRows: '1fr 1fr',
+    },
   }),
   historyGridItem: css({
     width: '15rem',
@@ -57,7 +68,7 @@ const styles = {
       position: 'relative',
       '&::after': {
         position: 'absolute',
-        right: '6.5rem',
+        left: '6rem',
         top: 0,
         display: 'block',
         content: '""',
@@ -66,35 +77,49 @@ const styles = {
         background: 'url(/img/star_history.png)',
         backgroundSize: '100% 100%',
         backgroundRepeat: 'no-repeat',
+        '@media screen and (max-height: 900px)': {
+          height: '1.7rem',
+          width: '1.7rem',
+        },
+        '@media screen and (max-height: 600px)': {
+          height: '1.5rem',
+          width: '1.5rem',
+        },
       },
     },
   }),
   year: css({
     fontSize: '2rem',
     margin: '0.5rem 0',
+    '@media screen and (max-height: 900px)': {
+      fontSize: '1.3rem',
+    },
+    '@media screen and (max-height: 600px)': {
+      fontSize: '1.1rem',
+    },
   }),
   historyDetailGridContainer: css({
     display: 'grid',
     gridTemplateColumns: '1fr 2fr',
     gridAutoFlow: 'row',
     flexGrow: 1,
-    overflow: 'auto',
+    overflow: 'hiden',
     gap: '3px 1rem',
-    scrollbarColor: 'black',
-    '::-webkit-scrollbar': {
-      height: '10px',
-      display: 'none',
-      scrollbarColor: 'black',
-      backgroundColor: 'black',
-    },
+
   }),
   date: css({
     margin: 0,
+    '@media screen and (max-height: 900px)': {
+      fontSize: '0.8rem',
+    },
   }),
   name: css({
     margin: 0,
     fontFamily: 'Cafe24SsurroundAir',
     fontSize: '0.8rem',
+    '@media screen and (max-height: 900px)': {
+      fontSize: '0.8rem',
+    },
   }),
 };
 
