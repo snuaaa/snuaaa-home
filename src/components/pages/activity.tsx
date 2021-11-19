@@ -12,7 +12,7 @@ import imgOtherActivity from 'public/img/chinmokdomo.png';
 import ActivityDetail from './activityDetail';
 
 const styles = {
-  main: css({ 
+  main: css({
     color: '#abcdef',
   }),
   contentWrapper: css({
@@ -88,7 +88,7 @@ const details = [
 const Activity: React.FC = () => {
   const makeActivityDetails = useCallback(() => details.map((detail) => (
     <ActivityDetail
-      key={`detail-${detail.index}`}
+      key={`activity-detail-${detail.index}`}
       index={detail.index}
       top={detail.top}
       left={detail.left}
@@ -98,11 +98,11 @@ const Activity: React.FC = () => {
       detailDescription={detail.detailDescription}
     />
   )), []);
-  
+
   return (
     <Page>
       <div className={cx([styles.main])}>
-        <div className={styles.contentWrapper}> 
+        <div className={styles.contentWrapper}>
           <p className={styles.title}>Our Activities</p>
           <p>AAA의 활동은 별방과 관측소 등에서 이루어집니다.</p>
           <p>별들을 클릭하여 AAA의 다양한 활동들을 알아보세요!</p>
@@ -111,13 +111,13 @@ const Activity: React.FC = () => {
           {
             makeActivityDetails()
           }
-          <Image src={line} alt='line'/>
+          <Image src={line} alt='line' />
         </div>
       </div>
     </Page>
   );
 };
-  
-  
+
+
 
 export default Activity;
