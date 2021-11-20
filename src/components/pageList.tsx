@@ -11,19 +11,17 @@ import Contact from './pages/contact';
 
 const PageList: React.FC = () => {
 
-  const { index, max } = usePage();
+  const { index } = usePage();
 
   const styles = useMemo(() => ({
     wrapper: css({
-      height: `${max * 100}%`,
       width: '100%',
-      top: `${-index * 100}vh`,
       position: 'absolute',
-      transitionProperty: 'top',
-      transitionDuration: '1s',
-      transitionTimingFunction: 'ease',
+      transform: `translateY(${-index * 100}vh)`,
+      transition: 'transform 0.5s ease',
+      willChange: 'transform',
     }),
-  }), [index, max]);
+  }), [index]);
 
   return (
     <>
