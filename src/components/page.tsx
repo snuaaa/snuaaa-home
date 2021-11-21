@@ -10,6 +10,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     boxSizing: 'border-box',
+    overflow: 'hidden',
   }),
 };
 

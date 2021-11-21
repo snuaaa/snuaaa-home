@@ -1,4 +1,5 @@
 import { css, cx } from '@emotion/css';
+import { Fragment } from 'react';
 import Page from 'src/components/page';
 import historyData from './historyData';
 
@@ -141,10 +142,10 @@ const HistoryDetail: React.FC<Props> = (props) => {
       <div className={styles.historyDetailGridContainer}>
         {
           details.map((detail) => (
-            <>
+            <Fragment key={detail.date}>
               <h5 className={styles.date}>{detail.date}</h5>
               <p className={styles.name}>{detail.name}</p>
-            </>
+            </Fragment>
           ))
         }
       </div>

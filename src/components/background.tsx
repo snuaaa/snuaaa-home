@@ -19,8 +19,8 @@ const styles = {
   }),
   stars: css({
     position: 'fixed',
-    height: '100%',
-    width: '100%',
+    height: '100vh',
+    width: '100vw',
     top: 0,
     mixBlendMode: 'lighten',
     opacity: 0.7,
@@ -44,10 +44,10 @@ const Background: React.FC = () => {
   return (
     <div className={cx([styles.background, backgroundStyle])}>
       <span className={styles.stars}>
-        <Image src={stars} layout="fill" objectFit="fill" alt="background" height="100%" width="100%" />
+        <Image src={stars} layout="fill" objectFit="cover" alt="background" />
       </span>
       <span className={cx([styles.stars, styles.mobile])}>
-        <Image src={starsMobile} layout="fill" alt="background_mobile" />
+        <Image src={starsMobile} layout="fill" objectFit="cover" alt="background_mobile" />
       </span>
     </div>
   );

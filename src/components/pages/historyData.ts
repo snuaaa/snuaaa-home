@@ -7,7 +7,7 @@ const historyData = [
         'name': '39회 천체 사진전 : For the STARved',
       },
       {
-        'date': '9.25',
+        'date': '09.25',
         'name': 'Home Coming Day',
       },
     ],
