@@ -3,12 +3,12 @@ import Image from 'next/image';
 import Page from 'src/components/page';
 import line from 'public/img/line.png';
 import { useCallback } from 'react';
-import imgDidimdol from 'public/img/didimdol.png';
-import imgByulmoim from 'public/img/byulmoim.png';
-import imgSogwuan from 'public/img/sogwuan.png';
-import imgChulsa from 'public/img/chulsa.png';
-import imgExhibition from 'public/img/sajinjeon.png';
-import imgOtherActivity from 'public/img/chinmokdomo.png';
+import imgDidimdol from 'public/img/activity/didimdol.png';
+import imgByul from 'public/img/activity/byul.png';
+import imgObservation from 'public/img/activity/observation.png';
+import imgTakingPictures from 'public/img/activity/taking_pictures.png';
+import imgExhibition from 'public/img/activity/exhibition.png';
+import imgFriendship from 'public/img/activity/friendship.png';
 import ActivityDetail from './activityDetail';
 
 const styles = {
@@ -69,7 +69,7 @@ const details = [
     starWidth: 74,
     starHeight: 64,
     starTranform: 'rotate(-41.34deg)',
-    detailImg: imgByulmoim,
+    detailImg: imgByul,
     detailDescription: '매주 모여 관측을 하거나 아마추어 천문에 대한 지식을 공유하는 자리입니다.',
   },
   {
@@ -80,7 +80,7 @@ const details = [
     starWidth: 57,
     starHeight: 51,
     starTranform: 'rotate(123.55deg)',
-    detailImg: imgSogwuan,
+    detailImg: imgObservation,
     detailDescription: '날씨가 좋은 날엔 최적의 관측 환경을 찾아 무박 2일의 관측 여행을 떠납니다. 동아리 활동의 꽃이라 할 수 있습니다.',
   },
   {
@@ -91,7 +91,7 @@ const details = [
     starWidth: 49,
     starHeight: 45,
     starTranform: 'rotate(22.17deg)',
-    detailImg: imgChulsa,
+    detailImg: imgTakingPictures,
     detailDescription: '학교 근처, 서울 근교의 멋진 풍경을 찾아서 천체사진을 촬영하는 활동입니다.',
   },
   {
@@ -113,7 +113,7 @@ const details = [
     starWidth: 51,
     starHeight: 44,
     starTranform: 'rotate(-62.87deg)',
-    detailImg: imgOtherActivity,
+    detailImg: imgFriendship,
     detailDescription: '관측활동 이외에도 MT와 다양한 모임 등 다양한 친목도모 활동도 진행하고 있습니다!',
   },
 ];
