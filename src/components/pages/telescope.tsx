@@ -236,13 +236,13 @@ const Telescope: React.FC = () => {
       <div className={styles.wrapper}>
         <div className={styles.imgWrapper}>
           <span className={styles.dobsonian}>
-            <Image src={dobsonian} alt="dobsonian" />
+            <Image src={dobsonian} alt="dobsonian" priority />
             {
               makeStars(telescopeDetails.filter((detail) => detail.type === TelescopeType.DOBSONIAN))
             }
           </span>
           <span className={styles.keplerian}>
-            <Image src={keplerian} alt="keplerian" />
+            <Image src={keplerian} alt="keplerian" priority />
             {
               makeStars(telescopeDetails.filter((detail) => detail.type === TelescopeType.THE_OTHERS))
             }

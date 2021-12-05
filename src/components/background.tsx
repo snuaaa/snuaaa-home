@@ -44,10 +44,10 @@ const Background: React.FC = () => {
   return (
     <div className={cx([styles.background, backgroundStyle])}>
       <span className={styles.stars}>
-        <Image src={stars} layout="fill" objectFit="cover" alt="background" />
+        <Image src={stars} layout="fill" objectFit="cover" alt="background" priority />
       </span>
       <span className={cx([styles.stars, styles.mobile])}>
-        <Image src={starsMobile} layout="fill" objectFit="cover" alt="background_mobile" />
+        <Image src={starsMobile} layout="fill" objectFit="cover" alt="background_mobile" priority />
       </span>
     </div>
   );

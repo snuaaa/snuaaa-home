@@ -146,7 +146,7 @@ const Activity: React.FC = () => {
           {
             makeActivityDetails()
           }
-          <Image src={line} alt='line' />
+          <Image src={line} alt='line' priority />
         </div>
       </div>
     </Page>

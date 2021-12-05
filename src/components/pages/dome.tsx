@@ -90,7 +90,7 @@ const Dome: React.FC = () => (
       </p>
     </div>
     <div className={styles.background}>
-      <Image src={backgrondImg} alt="backgroundImg" />
+      <Image src={backgrondImg} alt="backgroundImg" priority />
     </div>
   </Page>
 );
