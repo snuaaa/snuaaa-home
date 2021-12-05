@@ -12,6 +12,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name="description" content="Seoul National University Amateur Astronomy Association Homepage" />
+          <meta name="theme-color" content="#142e50" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://cdn.jsdelivr.net" />
           <link href="https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap" rel="stylesheet" />
