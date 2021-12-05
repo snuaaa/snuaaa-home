@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { css } from '@emotion/css';
 import usePage from 'src/hooks/usePage';
 import Home from './pages/home';
@@ -11,7 +11,7 @@ import Contact from './pages/contact';
 
 const PageList: React.FC = () => {
 
-  const { index } = usePage();
+  const { index, prev, next } = usePage();
 
   const styles = useMemo(() => ({
     wrapper: css({
@@ -22,6 +22,22 @@ const PageList: React.FC = () => {
       willChange: 'transform',
     }),
   }), [index]);
+
+  useEffect(() => {
+    const keyHandler = (ev: KeyboardEvent) => {
+      if (ev.key === 'ArrowDown') {
+        if (index > 0) {
+          next();
+        }
+      } else if (ev.key === 'ArrowUp') {
+        prev();
+      }
+    };
+    document.addEventListener('keydown', keyHandler);
+    return () => {
+      document.removeEventListener('keydown', keyHandler);
+    };
+  }, [index, prev, next]);
 
   return (
     <>
