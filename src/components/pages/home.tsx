@@ -60,7 +60,7 @@ const Home: React.FC = () => {
       </span>
       <div className={styles.buttonWrp}>
         <button type="button" onClick={next}>동아리 소개</button>
-        <a href="https://community.snuaaa.net/" rel="noopener noreferrer">
+        <a href="https://our.snuaaa.net/" rel="noopener noreferrer">
           <button type="button">커뮤니티</button>
         </a>
         <a href="https://archive.snuaaa.net/" rel="noopener noreferrer">
