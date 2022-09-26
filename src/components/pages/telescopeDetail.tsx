@@ -1,5 +1,5 @@
 import { css, cx } from '@emotion/css';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { nl2br } from 'src/utils/formatter';
 import prevIcon from 'public/img/icon/prev.svg';
 import nextIcon from 'public/img/icon/next.svg';

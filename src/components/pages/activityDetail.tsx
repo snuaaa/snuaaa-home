@@ -1,6 +1,6 @@
 import { css, cx } from '@emotion/css';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Star from '../star';
 
 const styles = {
