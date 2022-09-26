@@ -19,7 +19,7 @@ const styles = {
   }),
   stars: css({
     position: 'fixed',
-    height: '100vh',
+    height: '100%',
     width: '100vw',
     top: 0,
     mixBlendMode: 'lighten',

@@ -16,8 +16,9 @@ const PageList: React.FC = () => {
   const styles = useMemo(() => ({
     wrapper: css({
       width: '100%',
+      height: '100%',
       position: 'absolute',
-      transform: `translateY(${-index * 100}vh)`,
+      transform: `translateY(${-index * 100}%)`,
       transition: 'transform 0.5s ease',
       willChange: 'transform',
     }),

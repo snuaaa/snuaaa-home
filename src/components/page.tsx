@@ -6,7 +6,7 @@ const styles = {
     position: 'relative',
     flexDirection: 'column',
     width: '100%',
-    height: '100vh',
+    height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     boxSizing: 'border-box',
