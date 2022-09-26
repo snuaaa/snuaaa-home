@@ -81,6 +81,10 @@ class Canvas {
 
   private busTimer: number;
 
+  private isIntersecting: boolean = false;
+
+  private observer: IntersectionObserver;
+
   constructor(element: HTMLCanvasElement) {
     this.canvas = element;
     const context = element.getContext('2d', {
@@ -103,6 +107,15 @@ class Canvas {
     this.snuRight = new Image();
     this.snuRight.src = snuRightImg.src;
     this.busTimer = 0;
+    const callback: IntersectionObserverCallback = ([entry]) => {
+      if (entry.isIntersecting) {
+        this.start();
+      } else {
+        this.stop();
+      }
+    };
+    this.observer = new IntersectionObserver(callback);
+    this.observer.observe(element);
 
     window.addEventListener('resize', () => {
       this.resize();
@@ -127,6 +140,7 @@ class Canvas {
 }
 
   public animate() {
+    if (this.isIntersecting) {
     requestAnimationFrame(() => this.animate());
     this.context.clearRect(0, 0, this.width, this.height);
     this.drawBuilding();
@@ -134,6 +148,16 @@ class Canvas {
     this.drawSNULeft();
     this.drawBus();
     this.drawSNURight();
+    }
+  }
+
+  private start() {
+    this.isIntersecting = true;
+    this.animate();
+  }
+
+  private stop() {
+    this.isIntersecting = false;
   }
 
   private drawHill() {
